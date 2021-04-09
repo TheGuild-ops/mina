@@ -12,9 +12,9 @@ mkdir keys
 chmod 700 $HOME/keys
 chmod 600 $HOME/keys/my-wallet
 
-docker stop mina
-docker rm mina
-rm .coda-config -r
+sudo docker stop mina
+sudo docker rm mina
+sudo rm $HOME/.coda-config -r
 
 sudo docker run --name mina -d \
 --restart always \
@@ -31,5 +31,3 @@ daemon \
 -file-log-level Debug \
 -log-level Info \
 -peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt
-
-docker logs mina -f
