@@ -22,7 +22,7 @@ sudo docker run --name mina -d \
 -p 127.0.0.1:3085:3085 \
 -v $(pwd)/keys:$HOME/keys:ro \
 -v $(pwd)/.coda-config:$HOME/.coda-config \
--e CODA_PRIVKEY_PASS=$pa \
+-e CODA_PRIVKEY_PASS=$pas \
 $dockerName \
 daemon \
 -block-producer-key $HOME/keys/my-wallet \
