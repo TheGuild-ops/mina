@@ -4,7 +4,7 @@ echo ""
 echo "If enter key wron press ctrl+c and copy correct key to $HOME/keys/"
 echo "enter password"
 read pas
-
+cd
 systemctl stop mina
 mkdir keys
 chmod 700 $HOME/keys
