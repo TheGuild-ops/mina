@@ -1,7 +1,9 @@
 dockerName=minaprotocol/mina-daemon-baked:1.1.5-a42bdee
-cat $HOME/keys/my-wallet
+cat $HOME/keys/my-wallet.pub
 echo ""
 echo "If enter key wron press ctrl+c and copy correct key to $HOME/keys/"
+echo "press Enter to continue"
+read
 echo "enter password"
 read pas
 cd
