@@ -24,13 +24,13 @@ sudo docker run --name mina -d \
 -v $(pwd)/keys:$HOME/keys:ro \
 -v $(pwd)/.coda-config:$HOME/.coda-config \
 -e CODA_PRIVKEY_PASS=$pas \
+-e -open-limited-graphql-port \
+-e -limited-graphql-port 3095 \
 $dockerName \
 daemon \
 -block-producer-key $HOME/keys/my-wallet \
 -block-producer-password $pas \
 -insecure-rest-server \
--open-limited-graphql-port \
--limited-graphql-port 3095 \
 -file-log-level Debug \
 -log-level Info \
 -peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt
