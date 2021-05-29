@@ -29,8 +29,8 @@ daemon \
 -block-producer-key $HOME/keys/my-wallet \
 -block-producer-password $pas \
 -insecure-rest-server \
---open-limited-graphql-port \
---limited-graphql-port 3095 \
+-open-limited-graphql-port \
+-limited-graphql-port 3095 \
 -file-log-level Debug \
 -log-level Info \
 -peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt
