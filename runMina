@@ -24,7 +24,7 @@ sudo docker run --name mina -d \
 -v /root/keys:/root/keys:ro \
 -v /root/.mina-config:/root/.mina-config \
 -v /root/archive-data:/var/archive-data \
-local/mina-archive-bp:1.1.5 daemon \
+$dockerName \
 -e CODA_PRIVKEY_PASS=$pas
 --peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt \
 -block-producer-key /root/keys/my-wallet \
