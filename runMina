@@ -29,8 +29,8 @@ $dockerName \
 daemon \
 -block-producer-key $HOME/keys/my-wallet \
 -block-producer-password $pas \
--open-limited-graphql-port \
--limited-graphql-port 3095 \
+--limited-graphql-port 3095 \
+--open-limited-graphql-port \
 -insecure-rest-server \
 -file-log-level Debug \
 -log-level Info \
