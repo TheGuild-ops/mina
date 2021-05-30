@@ -30,9 +30,9 @@ $dockerName \
 -block-producer-key /root/keys/my-wallet \
 -block-producer-password $pas \
 -insecure-rest-server \
--open-limited-graphql-port \
--limited-graphql-port 3095 \
+--open-limited-graphql-port \
+--limited-graphql-port 3095 \
 -file-log-level Debug \
 -log-level Info \
 -archive-address 3086 \
--peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt
+--peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt
