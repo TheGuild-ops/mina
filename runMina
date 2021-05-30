@@ -32,8 +32,6 @@ daemon \
 --limited-graphql-port 3095 \
 --open-limited-graphql-port \
 -insecure-rest-server \
---open-limited-graphql-port \
---limited-graphql-port 3095 \
 -file-log-level Debug \
 -log-level Info \
 -peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt \
