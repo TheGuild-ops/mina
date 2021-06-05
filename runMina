@@ -1,4 +1,5 @@
 dockerName=minaprotocol/mina-daemon-baked:1.1.5-a42bdee
+docker network create mina-network
 cat $HOME/keys/my-wallet.pub
 echo ""
 echo "If enter key wron press ctrl+c and copy correct key to $HOME/keys/"
@@ -7,14 +8,16 @@ read
 echo "enter password"
 read pas
 cd
+docker stop mina
+docker rm -f mina
+
 systemctl stop mina
 mkdir keys
 chmod 700 $HOME/keys
 chmod 600 $HOME/keys/my-wallet
 rm runMina
 
-sudo docker stop mina
-sudo docker rm mina
+
 sudo rm $HOME/.coda-config -r
 
 sudo docker run --name mina -d \
@@ -29,10 +32,26 @@ $dockerName \
 daemon \
 -block-producer-key $HOME/keys/my-wallet \
 -block-producer-password $pas \
---limited-graphql-port 3095 \
+--network mina-network \
 --open-limited-graphql-port \
+--limited-graphql-port 3095 \
 -insecure-rest-server \
 -file-log-level Debug \
 -log-level Info \
 -peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt \
 -archive-address 3086
+
+cd $HOME && touch ./mina-sidecar-config.json
+cat << EOF > ./mina-sidecar-config.json
+{
+  "uploadURL": "https://us-central1-mina-mainnet-303900.cloudfunctions.net/block-producer-stats-ingest/?token=72941420a9595e1f4006e2f3565881b5",
+  "nodeURL": "http://mina:3095"
+}
+EOF
+
+docker run \
+--name mina-sidecar \
+--network mina-network \
+--restart=always -d \
+-v $(pwd)/mina-sidecar-config.json:/etc/mina-sidecar.json \
+minaprotocol/mina-bp-stats-sidecar:latest
