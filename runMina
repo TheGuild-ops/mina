@@ -36,7 +36,6 @@ $dockerName \
 daemon \
 -block-producer-key $HOME/keys/my-wallet \
 -block-producer-password $pas \
---network mina-network \
 --open-limited-graphql-port \
 --limited-graphql-port 3095 \
 -insecure-rest-server \
