@@ -25,6 +25,7 @@ sudo rm $HOME/.coda-config -r
 
 sudo docker run --name mina -d \
 --restart always \
+--network mina-network \
 -p 8302:8302 \
 -p 3095:3095 \
 -p 127.0.0.1:3085:3085 \
