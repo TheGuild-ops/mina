@@ -1,5 +1,5 @@
 dockerName=minaprotocol/mina-daemon-baked:1.1.5-a42bdee
-//dockerName=gcr.io/o1labs-192920/mina-daemon:1.1.6alpha4-74793a2-devnet
+##dockerName=gcr.io/o1labs-192920/mina-daemon:1.1.6alpha4-74793a2-devnet
 docker network create mina-network
 cat $HOME/keys/my-wallet.pub
 echo ""
