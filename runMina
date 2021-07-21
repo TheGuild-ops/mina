@@ -1,4 +1,4 @@
-dockerName=gcr.io/o1labs-192920/mina-daemon:1.2.0beta1-c856692-mainnet
+dockerName=gcr.io/o1labs-192920/mina-daemon:1.2.0beta2-23842ac-mainnet
 ##dockerName=gcr.io/o1labs-192920/mina-daemon:1.1.6alpha4-74793a2-devnet
 docker network create mina-network
 cat $HOME/keys/my-wallet.pub
