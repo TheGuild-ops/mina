@@ -51,6 +51,7 @@ cat << EOF > ./mina-sidecar-config.json
   "nodeURL": "http://mina:3095"
 }
 EOF
+docker network create mina-network
 
 docker run \
 --name mina-sidecar \
@@ -58,3 +59,4 @@ docker run \
 --restart=always -d \
 -v $(pwd)/mina-sidecar-config.json:/etc/mina-sidecar.json \
 minaprotocol/mina-bp-stats-sidecar:latest
+
