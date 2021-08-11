@@ -1,5 +1,8 @@
 dockerName=gcr.io/o1labs-192920/mina-daemon:1.2.0beta2-23842ac-mainnet
 ##dockerName=gcr.io/o1labs-192920/mina-daemon:1.1.6alpha4-74793a2-devnet
+
+docker network rm mina-network
+
 docker network create mina-network
 cat $HOME/keys/my-wallet.pub
 echo ""
@@ -11,11 +14,9 @@ read pas
 cd
 docker stop mina
 docker rm -f mina
-
 docker stop mina-sidecar
 docker rm -f mina-sidecar
 systemctl stop mina
-docker network rm mina-network
 echo y | docker network prune
 mkdir keys
 chmod 700 $HOME/keys
