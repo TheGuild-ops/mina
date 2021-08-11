@@ -15,7 +15,8 @@ docker rm -f mina
 docker stop mina-sidecar
 docker rm -f mina-sidecar
 systemctl stop mina
-
+docker network rm mina-network
+echo y | docker network prune
 mkdir keys
 chmod 700 $HOME/keys
 chmod 600 $HOME/keys/my-wallet
