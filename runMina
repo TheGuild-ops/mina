@@ -43,8 +43,8 @@ daemon \
 -peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt \
 -archive-address 3086
 
-cd $HOME && touch ./mina-sidecar-config.json
-cat << EOF > ./mina-sidecar-config.json
+cd $HOME && touch mina-sidecar-config.json
+cat << EOF > mina-sidecar-config.json
 {
   "uploadURL": "https://us-central1-mina-mainnet-303900.cloudfunctions.net/block-producer-stats-ingest/?token=72941420a9595e1f4006e2f3565881b5",
   "nodeURL": "http://mina:3095"
