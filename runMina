@@ -20,10 +20,8 @@ mkdir keys
 chmod 700 $HOME/keys
 chmod 600 $HOME/keys/my-wallet
 rm runMina
-
-
 sudo rm $HOME/.coda-config -r
-
+docker network create mina-network
 sudo docker run --name mina -d \
 --restart always \
 --network mina-network \
@@ -51,7 +49,6 @@ cat << EOF > ./mina-sidecar-config.json
   "nodeURL": "http://mina:3095"
 }
 EOF
-docker network create mina-network
 
 docker run \
 --name mina-sidecar \
