@@ -1,7 +1,5 @@
 dockerName=gcr.io/o1labs-192920/mina-daemon:1.2.0beta2-23842ac-mainnet
 ##dockerName=gcr.io/o1labs-192920/mina-daemon:1.1.6alpha4-74793a2-devnet
-
-
 cat $HOME/keys/my-wallet.pub
 echo ""
 echo "If enter key wron press ctrl+c and copy correct key to $HOME/keys/"
