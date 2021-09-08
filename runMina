@@ -1,5 +1,6 @@
 ##dockerName=gcr.io/o1labs-192920/mina-daemon:1.2.0beta2-23842ac-mainnet
-dockerName=minaprotocol/mina-daemon-baked:1.1.5-a42bdee
+##dockerName=minaprotocol/mina-daemon-baked:1.1.5-a42bdee
+gcr.io/o1labs-192920/mina-daemon:1.2.0beta5-260701a-mainnet
 ##dockerName=gcr.io/o1labs-192920/mina-archive:1.2.0beta3-0c70f84
 cat $HOME/keys/my-wallet.pub
 echo ""
