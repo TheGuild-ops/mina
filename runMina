@@ -1,8 +1,9 @@
 ##dockerName=gcr.io/o1labs-192920/mina-daemon:1.2.0beta2-23842ac-mainnet
 ##dockerName=minaprotocol/mina-daemon-baked:1.1.5-a42bdee
 ##dockerNamegcr.io/o1labs-192920/mina-daemon:1.2.0beta5-260701a-mainnet
-dockerName=minaprotocol/mina-daemon-baked:1.1.7-d5ff5aa-mainnet
+##dockerName=minaprotocol/mina-daemon-baked:1.1.7-d5ff5aa-mainnet
 ##dockerName=gcr.io/o1labs-192920/mina-archive:1.2.0beta3-0c70f84
+dockerName=gcr.io/o1labs-192920/mina-daemon-baked:1.1.8-b10c0e3-mainnet
 cat $HOME/keys/my-wallet.pub
 echo ""
 echo "If enter key wron press ctrl+c and copy correct key to $HOME/keys/"
