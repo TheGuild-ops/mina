@@ -33,6 +33,7 @@ sudo docker run --name mina -d \
 --network mina-network \
 -p 8302:8302 \
 -p 3095:3095 \
+-p 3086:3086 \
 -v $(pwd)/keys:$HOME/keys:ro \
 -v $(pwd)/.coda-config:$HOME/.coda-config \
 -e CODA_PRIVKEY_PASS=$pas \
