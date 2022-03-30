@@ -39,11 +39,9 @@ sudo docker run --name mina -d \
 -e MINA_PRIVKEY_PASS=$pas \
 $dockerName \
 daemon \
-## Node 
---uptime-submitter-key </path/to/private/key> \
+--uptime-submitter-key $HOME/keys/my-wallet \
 --uptime-url https://uptime-backend.minaprotocol.com/v1/submit \
 --UPTIME_PRIVKEY_PASS=$pas \
-##
 --limited-graphql-port 3095 \
 --open-limited-graphql-port \
 -block-producer-key $HOME/keys/my-wallet \
@@ -61,8 +59,6 @@ cat << EOF > mina-sidecar-config.json
   "nodeURL": "http://mina:3095"
 }
 EOF
-
-
 
 docker run --name mina-sidecar \
 --network=mina-network \
