@@ -51,8 +51,7 @@ daemon \
 -insecure-rest-server \
 -file-log-level Debug \
 -log-level Info \
--peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt \
--archive-address 3086
+-peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt 
 
 cd $HOME && touch mina-sidecar-config.json
 cat << EOF > mina-sidecar-config.json
