@@ -10,7 +10,7 @@ apt-get update && apt-get upgrade -y
 ##dockerName=minaprotocol/mina-daemon:1.3.0beta4-202caa6-focal-mainnet
 ##dockerName=minaprotocol/mina-daemon:1.3.0-9b0369c-bullseye-mainnet
 
-dockerName=minaprotocol/mina-daemon:1.3.0-release-2.0.0-69730d8-focal-berkeley
+dockerName=minaprotocol/mina-daemon:1.3.0-release-2.0.0-69730d8-focal-mainnet
 
 cat $HOME/keys/my-wallet.pub
 echo ""
@@ -52,7 +52,7 @@ daemon \
 --limited-graphql-port 3095 \
 --open-limited-graphql-port \
 --archive-address 3086 \
---peer-list-url https://storage.googleapis.com/seed-lists/berkeley_seeds.txt \
+--peer-list-url https://storage.googleapis.com/mina-seed-lists/mainnet_seeds.txt \
 -block-producer-key $HOME/keys/my-wallet \
 -block-producer-password $pas \
 -insecure-rest-server \
